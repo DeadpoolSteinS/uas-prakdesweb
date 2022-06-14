@@ -1,0 +1,73 @@
+html, body {
+    background-color: #05595B;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.btn-darkgreen {
+    padding: 10px 20px;
+    background-color: #05595B;
+    border-radius: 10px;
+    border: 0px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-darkgreen:hover {
+    background-color: #022e2f;
+}
+
+.container-wrapper {
+    color: black;
+    background-color: #05595B;
+    width: 100%;
+    /* max-width: 2000px; */
+}
+
+.container-login {
+    padding-left: 100px;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.container {
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.login-ask {
+    margin: 0;
+    padding: 0;
+}
+
+.masuk-di-sini {
+    text-align: center;
+    color: #05595B;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.container {
+    align-items: center;
+    margin-top: 10%;
+    box-shadow: 0 0 8px 8px rgba(63, 63, 63, 0.8); /*any color you want*/
+}
+
+.form-input {
+    margin-top: 0px;
+}

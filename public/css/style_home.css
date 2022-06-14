@@ -1,0 +1,271 @@
+.container-real {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: "Roboto Slab", serif !important;
+}
+
+.top-bar {
+    position: fixed;
+    width: 100%;
+    min-height: 80px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #062c30;
+    z-index: 100;
+}
+
+#search-input {
+    width: 250px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    outline: none;
+}
+
+#profile img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+    width: 100%;
+    display: flex;
+}
+
+/* LEFT NAV */
+
+.left-nav {
+    position: fixed;
+    /* not working */
+    overflow-y: scroll;
+    top: 80px;
+    width: 200px;
+    min-height: calc(100vh - 80px);
+    padding: 20px;
+    background-color: #f5f5f5;
+    transition: 0.3s;
+}
+
+/* size arrow/ham left nav */
+.nav-left-clicker {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.left-nav .menu {
+    position: fixed;
+    transform: translateX(80px);
+    transition: 0.3s;
+}
+
+/* show menu left nav */
+.left-menu-active {
+    transform: translateX(0px) !important;
+}
+
+.left-nav a {
+    color: #062c30;
+    text-decoration: none;
+}
+
+/* MID CONTENT */
+
+.mid-content {
+    position: relative;
+    width: calc(100% - 80px);
+    min-height: calc(100vh - 80px);
+    left: 80px;
+    top: 80px;
+    background-color: white;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+/* when left nav active */
+.mid-active {
+    width: calc(100% - 200px);
+    left: 200px;
+}
+
+/* MID NAV */
+
+.mid-content nav {
+    position: fixed;
+    width: calc(100% - 80px);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #05595b;
+    z-index: 100;
+}
+
+.mid-content nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.mid-content nav a:hover,
+.mid-content nav .nav-active {
+    color: yellow;
+}
+
+/* MID TASK AREA */
+.task-area {
+    margin-top: 50px;
+    padding: 20px 40px;
+}
+
+.task-area > h1 {
+    margin-bottom: 30px;
+}
+
+/* gap group task */
+.group-task {
+    margin-bottom: 20px;
+}
+
+.group-task > div {
+    padding: 10px 40px;
+    background-color: #f5f5f5;
+    border: 1px solid #aaa;
+}
+
+.head-task {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-task ion-icon {
+    cursor: pointer;
+}
+
+.content-task {
+    display: none;
+    padding: 10px 40px;
+}
+
+.content-task li {
+    list-style: none;
+    display: flex;
+}
+
+.content-task > li > p:nth-child(1) {
+    font-weight: bold;
+    width: 200px;
+}
+
+.content-task > li > p {
+    margin-bottom: 10px;
+}
+
+/* change background when user is edit/update task */
+[contenteditable="true"]:focus {
+    background-color: white;
+}
+
+.button-action {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.button-action button {
+    border: 1px solid #aaa;
+    background-color: #05595b;
+    color: white;
+}
+.button-crud .btn-delete-crud {
+    background-color: white;
+    color: #05595b;
+}
+
+#button-add {
+    position: fixed;
+    cursor: pointer;
+    font-size: 3rem;
+    right: 50px;
+    bottom: 20px;
+    z-index: 100;
+    padding: 0 24px;
+    border-radius: 50%;
+    color: white;
+    background-color: #05595b;
+}
+
+/* RIGHT FORM */
+
+.right-nav {
+    position: fixed;
+    overflow-y: scroll;
+    z-index: 20;
+    width: 600px;
+    height: calc(100vh - 80px);
+    background-color: white;
+    top: 80px;
+    right: 0;
+    transform: translateX(600px);
+    border-left: 2px solid #aaa;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+/* change position when active */
+.right-nav-active {
+    transform: translateX(0);
+}
+
+/* close form button */
+.nav-right-clicker {
+    padding: 5px 10px;
+    border-radius: 50%;
+    color: white;
+    background-color: #05595b;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.right-nav h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.right-nav label {
+    font-weight: bold;
+}
+
+/* checkbox label not bold */
+.right-nav .option-check label {
+    font-weight: normal;
+    margin: 0 10px;
+}
+
+/* submit form button */
+.right-nav button {
+    margin-top: 10px;
+    background-color: #05595b !important;
+}
+.right-nav button:hover {
+    background-color: #0c6566 !important;
+}
+
+/* MODAL STYLE */
+.left-form > div,
+.right-form > div {
+    margin-bottom: 30px !important;
+}
+
+#close-modal-edit {
+    color: #05595b;
+    background-color: #ddd280;
+}
+
+#submit-modal-edit {
+    background-color: #05595b;
+}
